@@ -19,8 +19,8 @@
     ' ==== MENU EVENTS ====
 
     Private Sub mnuDataSiswa_Click(sender As Object, e As EventArgs) Handles mnuDataSiswa.Click
-        'Dim f As New FormDataSiswa()
-        'f.ShowDialog()
+        Dim f As New FormDataSiswa()
+        f.ShowDialog()
     End Sub
 
     Private Sub mnuKeluar_Click(sender As Object, e As EventArgs) Handles mnuKeluar.Click
