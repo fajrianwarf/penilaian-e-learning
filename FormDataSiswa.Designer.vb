@@ -23,23 +23,23 @@ Partial Class FormDataSiswa
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         grpFormSiswa = New GroupBox()
-        Label1 = New Label()
-        txtNIS = New TextBox()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        txtNama = New TextBox()
-        cboKelas = New ComboBox()
-        rdoLaki = New RadioButton()
-        rdoPerempuan = New RadioButton()
-        chkAktif = New CheckBox()
-        Label5 = New Label()
         dtpDaftar = New DateTimePicker()
+        Label5 = New Label()
+        chkAktif = New CheckBox()
+        rdoPerempuan = New RadioButton()
+        rdoLaki = New RadioButton()
+        cboKelas = New ComboBox()
+        txtNama = New TextBox()
+        Label4 = New Label()
+        Label3 = New Label()
+        Label2 = New Label()
+        txtNIS = New TextBox()
+        Label1 = New Label()
         GroupBox1 = New GroupBox()
-        btnTambah = New Button()
-        btnUbah = New Button()
-        btnHapus = New Button()
         btnBersih = New Button()
+        btnHapus = New Button()
+        btnUbah = New Button()
+        btnTambah = New Button()
         dgvSiswa = New DataGridView()
         NIS = New DataGridViewTextBoxColumn()
         Nama = New DataGridViewTextBoxColumn()
@@ -73,74 +73,31 @@ Partial Class FormDataSiswa
         grpFormSiswa.TabStop = False
         grpFormSiswa.Text = "Form Siswa"
         ' 
-        ' Label1
+        ' dtpDaftar
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(6, 27)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(25, 15)
-        Label1.TabIndex = 0
-        Label1.Text = "NIS"
+        dtpDaftar.Location = New Point(137, 170)
+        dtpDaftar.Name = "dtpDaftar"
+        dtpDaftar.Size = New Size(200, 23)
+        dtpDaftar.TabIndex = 11
         ' 
-        ' txtNIS
+        ' Label5
         ' 
-        txtNIS.Location = New Point(137, 19)
-        txtNIS.Name = "txtNIS"
-        txtNIS.Size = New Size(121, 23)
-        txtNIS.TabIndex = 1
+        Label5.AutoSize = True
+        Label5.Location = New Point(6, 174)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(84, 15)
+        Label5.TabIndex = 10
+        Label5.Text = "Tanggal Daftar"
         ' 
-        ' Label2
+        ' chkAktif
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(6, 56)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(39, 15)
-        Label2.TabIndex = 2
-        Label2.Text = "Nama"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(6, 85)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(34, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "Kelas"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(6, 113)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(78, 15)
-        Label4.TabIndex = 3
-        Label4.Text = "Jenis Kelamin"
-        ' 
-        ' txtNama
-        ' 
-        txtNama.Location = New Point(137, 48)
-        txtNama.Name = "txtNama"
-        txtNama.Size = New Size(121, 23)
-        txtNama.TabIndex = 4
-        ' 
-        ' cboKelas
-        ' 
-        cboKelas.FormattingEnabled = True
-        cboKelas.Location = New Point(137, 77)
-        cboKelas.Name = "cboKelas"
-        cboKelas.Size = New Size(121, 23)
-        cboKelas.TabIndex = 6
-        ' 
-        ' rdoLaki
-        ' 
-        rdoLaki.AutoSize = True
-        rdoLaki.Location = New Point(137, 110)
-        rdoLaki.Name = "rdoLaki"
-        rdoLaki.Size = New Size(69, 19)
-        rdoLaki.TabIndex = 7
-        rdoLaki.TabStop = True
-        rdoLaki.Text = "Laki-laki"
-        rdoLaki.UseVisualStyleBackColor = True
+        chkAktif.AutoSize = True
+        chkAktif.Location = New Point(137, 145)
+        chkAktif.Name = "chkAktif"
+        chkAktif.Size = New Size(111, 19)
+        chkAktif.TabIndex = 9
+        chkAktif.Text = "Aktif e-Learning"
+        chkAktif.UseVisualStyleBackColor = True
         ' 
         ' rdoPerempuan
         ' 
@@ -153,31 +110,74 @@ Partial Class FormDataSiswa
         rdoPerempuan.Text = "Perempuan"
         rdoPerempuan.UseVisualStyleBackColor = True
         ' 
-        ' chkAktif
+        ' rdoLaki
         ' 
-        chkAktif.AutoSize = True
-        chkAktif.Location = New Point(137, 145)
-        chkAktif.Name = "chkAktif"
-        chkAktif.Size = New Size(111, 19)
-        chkAktif.TabIndex = 9
-        chkAktif.Text = "Aktif e-Learning"
-        chkAktif.UseVisualStyleBackColor = True
+        rdoLaki.AutoSize = True
+        rdoLaki.Location = New Point(137, 110)
+        rdoLaki.Name = "rdoLaki"
+        rdoLaki.Size = New Size(69, 19)
+        rdoLaki.TabIndex = 7
+        rdoLaki.TabStop = True
+        rdoLaki.Text = "Laki-laki"
+        rdoLaki.UseVisualStyleBackColor = True
         ' 
-        ' Label5
+        ' cboKelas
         ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(6, 174)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(84, 15)
-        Label5.TabIndex = 10
-        Label5.Text = "Tanggal Daftar"
+        cboKelas.FormattingEnabled = True
+        cboKelas.Location = New Point(137, 77)
+        cboKelas.Name = "cboKelas"
+        cboKelas.Size = New Size(121, 23)
+        cboKelas.TabIndex = 6
         ' 
-        ' dtpDaftar
+        ' txtNama
         ' 
-        dtpDaftar.Location = New Point(137, 170)
-        dtpDaftar.Name = "dtpDaftar"
-        dtpDaftar.Size = New Size(200, 23)
-        dtpDaftar.TabIndex = 11
+        txtNama.Location = New Point(137, 48)
+        txtNama.Name = "txtNama"
+        txtNama.Size = New Size(121, 23)
+        txtNama.TabIndex = 4
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(6, 113)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(78, 15)
+        Label4.TabIndex = 3
+        Label4.Text = "Jenis Kelamin"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(6, 85)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(34, 15)
+        Label3.TabIndex = 2
+        Label3.Text = "Kelas"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(6, 56)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(39, 15)
+        Label2.TabIndex = 2
+        Label2.Text = "Nama"
+        ' 
+        ' txtNIS
+        ' 
+        txtNIS.Location = New Point(137, 19)
+        txtNIS.Name = "txtNIS"
+        txtNIS.Size = New Size(121, 23)
+        txtNIS.TabIndex = 1
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(6, 27)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(25, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "NIS"
         ' 
         ' GroupBox1
         ' 
@@ -192,23 +192,14 @@ Partial Class FormDataSiswa
         GroupBox1.TabStop = False
         GroupBox1.Text = "Aksi"
         ' 
-        ' btnTambah
+        ' btnBersih
         ' 
-        btnTambah.Location = New Point(6, 22)
-        btnTambah.Name = "btnTambah"
-        btnTambah.Size = New Size(75, 23)
-        btnTambah.TabIndex = 0
-        btnTambah.Text = "Tambah"
-        btnTambah.UseVisualStyleBackColor = True
-        ' 
-        ' btnUbah
-        ' 
-        btnUbah.Location = New Point(100, 22)
-        btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(75, 23)
-        btnUbah.TabIndex = 1
-        btnUbah.Text = "Ubah"
-        btnUbah.UseVisualStyleBackColor = True
+        btnBersih.Location = New Point(290, 22)
+        btnBersih.Name = "btnBersih"
+        btnBersih.Size = New Size(75, 23)
+        btnBersih.TabIndex = 3
+        btnBersih.Text = "Bersih"
+        btnBersih.UseVisualStyleBackColor = True
         ' 
         ' btnHapus
         ' 
@@ -219,14 +210,23 @@ Partial Class FormDataSiswa
         btnHapus.Text = "Hapus"
         btnHapus.UseVisualStyleBackColor = True
         ' 
-        ' btnBersih
+        ' btnUbah
         ' 
-        btnBersih.Location = New Point(290, 22)
-        btnBersih.Name = "btnBersih"
-        btnBersih.Size = New Size(75, 23)
-        btnBersih.TabIndex = 3
-        btnBersih.Text = "Bersih"
-        btnBersih.UseVisualStyleBackColor = True
+        btnUbah.Location = New Point(100, 22)
+        btnUbah.Name = "btnUbah"
+        btnUbah.Size = New Size(75, 23)
+        btnUbah.TabIndex = 1
+        btnUbah.Text = "Ubah"
+        btnUbah.UseVisualStyleBackColor = True
+        ' 
+        ' btnTambah
+        ' 
+        btnTambah.Location = New Point(6, 22)
+        btnTambah.Name = "btnTambah"
+        btnTambah.Size = New Size(75, 23)
+        btnTambah.TabIndex = 0
+        btnTambah.Text = "Tambah"
+        btnTambah.UseVisualStyleBackColor = True
         ' 
         ' dgvSiswa
         ' 

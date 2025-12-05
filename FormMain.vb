@@ -12,8 +12,7 @@
 
     Private Sub UpdateDashboard()
         lblJumlahSiswa.Text = Students.Count.ToString()
-        ' untuk sekarang jumlah mapel masih 0, nanti bertambah saat form mapel jadi
-        lblJumlahMapel.Text = "0"
+        lblJumlahMapel.Text = Courses.Count.ToString()
     End Sub
 
     ' ==== MENU EVENTS ====
@@ -33,6 +32,12 @@
                         "Tentang Aplikasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+    Private Sub mnuDataMapel_Click(sender As Object, e As EventArgs) Handles mnuDataMapel.Click
+        Dim f As New FormDataMapel()
+        f.ShowDialog()
+    End Sub
+
 
     ' mnuDataMapel, mnuInputNilai, mnuRekapNilai
     ' nanti dipakai saat screen lain sudah kamu buat
