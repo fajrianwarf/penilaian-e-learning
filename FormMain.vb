@@ -38,6 +38,10 @@
         f.ShowDialog()
     End Sub
 
+    Private Sub mnuInputNilai_Click(sender As Object, e As EventArgs) Handles mnuInputNilai.Click
+        Dim f As New FormInputNilai()
+        f.ShowDialog()
+    End Sub
 
     ' mnuDataMapel, mnuInputNilai, mnuRekapNilai
     ' nanti dipakai saat screen lain sudah kamu buat
