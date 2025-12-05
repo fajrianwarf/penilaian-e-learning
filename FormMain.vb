@@ -43,6 +43,12 @@
         f.ShowDialog()
     End Sub
 
+    Private Sub mnuRekapNilai_Click(sender As Object, e As EventArgs) Handles mnuRekapNilai.Click
+        Dim f As New FormRekapNilai()
+        f.ShowDialog()
+    End Sub
+
+
     ' mnuDataMapel, mnuInputNilai, mnuRekapNilai
     ' nanti dipakai saat screen lain sudah kamu buat
 End Class
