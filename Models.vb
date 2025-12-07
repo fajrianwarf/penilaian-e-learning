@@ -58,4 +58,12 @@ Module AppData
     Public Const BobotUTS As Double = 0.3
     Public Const BobotUAS As Double = 0.4
     Public Const NilaiMinimalLulus As Integer = 70
+
+    ' Konstanta batas minimal grade
+    Public Const GradeAMin As Integer = 85
+    Public Const GradeBMin As Integer = 75
+    Public Const GradeCMin As Integer = 65
+    Public Const GradeDMin As Integer = 50
+    ' E otomatis < GradeDMin
+
 End Module

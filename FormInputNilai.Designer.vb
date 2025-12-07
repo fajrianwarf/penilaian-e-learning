@@ -44,9 +44,12 @@ Partial Class FormInputNilai
         txtNilaiAkhir = New TextBox()
         Label7 = New Label()
         GroupBox4 = New GroupBox()
+        btnKembali = New Button()
         btnReset = New Button()
         btnSimpan = New Button()
         btnHitung = New Button()
+        GroupBox5 = New GroupBox()
+        lblInfoGrade = New Label()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         CType(numUAS, ComponentModel.ISupportInitialize).BeginInit()
@@ -55,6 +58,7 @@ Partial Class FormInputNilai
         CType(numTugas, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox3.SuspendLayout()
         GroupBox4.SuspendLayout()
+        GroupBox5.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
@@ -65,13 +69,14 @@ Partial Class FormInputNilai
         GroupBox1.Controls.Add(cboSiswa)
         GroupBox1.Location = New Point(12, 12)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(490, 130)
+        GroupBox1.Size = New Size(411, 130)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Identitas"
         ' 
         ' cboMapel
         ' 
+        cboMapel.DropDownStyle = ComboBoxStyle.DropDownList
         cboMapel.FormattingEnabled = True
         cboMapel.Location = New Point(204, 76)
         cboMapel.Name = "cboMapel"
@@ -98,6 +103,7 @@ Partial Class FormInputNilai
         ' 
         ' cboSiswa
         ' 
+        cboSiswa.DropDownStyle = ComboBoxStyle.DropDownList
         cboSiswa.FormattingEnabled = True
         cboSiswa.Location = New Point(204, 30)
         cboSiswa.Name = "cboSiswa"
@@ -116,7 +122,7 @@ Partial Class FormInputNilai
         GroupBox2.Controls.Add(Label3)
         GroupBox2.Location = New Point(12, 158)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(490, 230)
+        GroupBox2.Size = New Size(411, 230)
         GroupBox2.TabIndex = 1
         GroupBox2.TabStop = False
         GroupBox2.Text = "Nilai"
@@ -125,7 +131,7 @@ Partial Class FormInputNilai
         ' 
         numUAS.Location = New Point(204, 167)
         numUAS.Name = "numUAS"
-        numUAS.Size = New Size(180, 31)
+        numUAS.Size = New Size(182, 31)
         numUAS.TabIndex = 7
         ' 
         ' Label6
@@ -141,7 +147,7 @@ Partial Class FormInputNilai
         ' 
         numUTS.Location = New Point(204, 125)
         numUTS.Name = "numUTS"
-        numUTS.Size = New Size(180, 31)
+        numUTS.Size = New Size(182, 31)
         numUTS.TabIndex = 5
         ' 
         ' Label5
@@ -157,14 +163,14 @@ Partial Class FormInputNilai
         ' 
         numQuiz.Location = New Point(204, 83)
         numQuiz.Name = "numQuiz"
-        numQuiz.Size = New Size(180, 31)
+        numQuiz.Size = New Size(182, 31)
         numQuiz.TabIndex = 3
         ' 
         ' numTugas
         ' 
         numTugas.Location = New Point(204, 40)
         numTugas.Name = "numTugas"
-        numTugas.Size = New Size(180, 31)
+        numTugas.Size = New Size(182, 31)
         numTugas.TabIndex = 2
         ' 
         ' Label4
@@ -195,7 +201,7 @@ Partial Class FormInputNilai
         GroupBox3.Controls.Add(Label7)
         GroupBox3.Location = New Point(12, 394)
         GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(490, 182)
+        GroupBox3.Size = New Size(776, 231)
         GroupBox3.TabIndex = 2
         GroupBox3.TabStop = False
         GroupBox3.Text = "Hasil"
@@ -253,15 +259,25 @@ Partial Class FormInputNilai
         ' 
         ' GroupBox4
         ' 
+        GroupBox4.Controls.Add(btnKembali)
         GroupBox4.Controls.Add(btnReset)
         GroupBox4.Controls.Add(btnSimpan)
         GroupBox4.Controls.Add(btnHitung)
-        GroupBox4.Location = New Point(12, 582)
+        GroupBox4.Location = New Point(12, 636)
         GroupBox4.Name = "GroupBox4"
-        GroupBox4.Size = New Size(490, 107)
+        GroupBox4.Size = New Size(776, 93)
         GroupBox4.TabIndex = 3
         GroupBox4.TabStop = False
         GroupBox4.Text = "Aksi"
+        ' 
+        ' btnKembali
+        ' 
+        btnKembali.Location = New Point(406, 42)
+        btnKembali.Name = "btnKembali"
+        btnKembali.Size = New Size(209, 34)
+        btnKembali.TabIndex = 3
+        btnKembali.Text = "Kembali ke Dashboard"
+        btnKembali.UseVisualStyleBackColor = True
         ' 
         ' btnReset
         ' 
@@ -290,15 +306,36 @@ Partial Class FormInputNilai
         btnHitung.Text = "Hitung"
         btnHitung.UseVisualStyleBackColor = True
         ' 
+        ' GroupBox5
+        ' 
+        GroupBox5.Controls.Add(lblInfoGrade)
+        GroupBox5.Location = New Point(429, 12)
+        GroupBox5.Name = "GroupBox5"
+        GroupBox5.Size = New Size(359, 376)
+        GroupBox5.TabIndex = 4
+        GroupBox5.TabStop = False
+        GroupBox5.Text = "Informasi Grade dan Status"
+        ' 
+        ' lblInfoGrade
+        ' 
+        lblInfoGrade.Location = New Point(6, 41)
+        lblInfoGrade.Name = "lblInfoGrade"
+        lblInfoGrade.Size = New Size(347, 332)
+        lblInfoGrade.TabIndex = 0
+        lblInfoGrade.Text = "-"
+        ' 
         ' FormInputNilai
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 807)
+        ClientSize = New Size(800, 761)
+        Controls.Add(GroupBox5)
         Controls.Add(GroupBox4)
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
         Name = "FormInputNilai"
         Text = "Input Nilai & Penilaian"
         GroupBox1.ResumeLayout(False)
@@ -312,6 +349,7 @@ Partial Class FormInputNilai
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
         GroupBox4.ResumeLayout(False)
+        GroupBox5.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -340,4 +378,7 @@ Partial Class FormInputNilai
     Friend WithEvents btnReset As Button
     Friend WithEvents btnSimpan As Button
     Friend WithEvents btnHitung As Button
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents lblInfoGrade As Label
+    Friend WithEvents btnKembali As Button
 End Class

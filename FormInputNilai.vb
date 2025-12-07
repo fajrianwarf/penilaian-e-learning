@@ -3,6 +3,7 @@
     Private Sub FormInputNilai_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadCombos()
         ResetForm()
+        SetInfoGradeDanStatus()
     End Sub
 
     Private Sub LoadCombos()
@@ -34,14 +35,32 @@
         txtStatus.Clear()
     End Sub
 
-    Private Function HitungGrade(nilai As Double) As GradeHuruf
-        If nilai >= 85 Then
+    Public Sub SetInfoGradeDanStatus()
+        Dim info As String = ""
+
+        info &= "Aturan Grade:" & Environment.NewLine
+        info &= "A : " & GradeAMin & " - 100" & Environment.NewLine
+        info &= "B : " & GradeBMin & " - " & (GradeAMin - 1) & Environment.NewLine
+        info &= "C : " & GradeCMin & " - " & (GradeBMin - 1) & Environment.NewLine
+        info &= "D : " & GradeDMin & " - " & (GradeCMin - 1) & Environment.NewLine
+        info &= "E : < " & GradeDMin & Environment.NewLine
+        info &= Environment.NewLine
+        info &= "Status:" & Environment.NewLine
+        info &= "Lulus jika Nilai Akhir ≥ " & NilaiMinimalLulus.ToString() & Environment.NewLine
+        info &= "Tidak Lulus jika Nilai Akhir < " & NilaiMinimalLulus.ToString()
+
+        lblInfoGrade.Text = info
+    End Sub
+
+
+    Public Function HitungGrade(nilaiAkhir As Double) As GradeHuruf
+        If nilaiAkhir >= GradeAMin Then
             Return GradeHuruf.A
-        ElseIf nilai >= 75 Then
+        ElseIf nilaiAkhir >= GradeBMin Then
             Return GradeHuruf.B
-        ElseIf nilai >= 65 Then
+        ElseIf nilaiAkhir >= GradeCMin Then
             Return GradeHuruf.C
-        ElseIf nilai >= 55 Then
+        ElseIf nilaiAkhir >= GradeDMin Then
             Return GradeHuruf.D
         Else
             Return GradeHuruf.E
@@ -136,5 +155,9 @@
     ' ========== BUTTON RESET ==========
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         ResetForm()
+    End Sub
+
+    Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
+        Me.Close()
     End Sub
 End Class
