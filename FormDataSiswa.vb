@@ -1,6 +1,5 @@
 ﻿Public Class FormDataSiswa
 
-    ' form load: isi combobox kelas dan tampilkan data awal
     Private Sub FormDataSiswa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadKelas()
         RefreshGrid()
@@ -12,9 +11,9 @@
     Private Sub LoadKelas()
         cboKelas.Items.Clear()
         cboKelas.Items.AddRange(New Object() {
-            "X IPA", "X IPS",
-            "XI IPA", "XI IPS",
-            "XII IPA", "XII IPS"
+            "IF101", "IF102",
+            "IF103", "IF104",
+            "IF105", "IF106"
         })
         If cboKelas.Items.Count > 0 Then
             cboKelas.SelectedIndex = 0
@@ -59,7 +58,6 @@
         Return True
     End Function
 
-    ' Cari student berdasarkan NIS (tanpa LINQ)
     Private Function CariStudentByNIS(nis As String) As Student
         For Each s In Students
             If s.NIS = nis Then
@@ -69,7 +67,6 @@
         Return Nothing
     End Function
 
-    ' ====== BUTTON EVENTS ======
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         If Not ValidasiInput() Then Exit Sub
@@ -137,7 +134,6 @@
         ClearForm()
     End Sub
 
-    ' klik baris di grid → isi kembali ke form
     Private Sub dgvSiswa_CellClick(sender As Object, e As DataGridViewCellEventArgs) _
         Handles dgvSiswa.CellClick
 
@@ -159,4 +155,9 @@
             dtpDaftar.Value = tgl
         End If
     End Sub
+
+    Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
+        Me.Close()
+    End Sub
+
 End Class

@@ -36,6 +36,7 @@ Partial Class FormDataSiswa
         txtNIS = New TextBox()
         Label1 = New Label()
         GroupBox1 = New GroupBox()
+        btnKembali = New Button()
         btnBersih = New Button()
         btnHapus = New Button()
         btnUbah = New Button()
@@ -66,46 +67,52 @@ Partial Class FormDataSiswa
         grpFormSiswa.Controls.Add(Label2)
         grpFormSiswa.Controls.Add(txtNIS)
         grpFormSiswa.Controls.Add(Label1)
-        grpFormSiswa.Location = New Point(12, 12)
+        grpFormSiswa.Location = New Point(13, 14)
+        grpFormSiswa.Margin = New Padding(4, 5, 4, 5)
         grpFormSiswa.Name = "grpFormSiswa"
-        grpFormSiswa.Size = New Size(504, 215)
+        grpFormSiswa.Padding = New Padding(4, 5, 4, 5)
+        grpFormSiswa.Size = New Size(1123, 358)
         grpFormSiswa.TabIndex = 0
         grpFormSiswa.TabStop = False
         grpFormSiswa.Text = "Form Siswa"
         ' 
         ' dtpDaftar
         ' 
-        dtpDaftar.Location = New Point(137, 170)
+        dtpDaftar.Location = New Point(196, 283)
+        dtpDaftar.Margin = New Padding(4, 5, 4, 5)
         dtpDaftar.Name = "dtpDaftar"
-        dtpDaftar.Size = New Size(200, 23)
-        dtpDaftar.TabIndex = 11
+        dtpDaftar.Size = New Size(325, 31)
+        dtpDaftar.TabIndex = 7
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(6, 174)
+        Label5.Location = New Point(9, 290)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(84, 15)
+        Label5.Size = New Size(127, 25)
         Label5.TabIndex = 10
         Label5.Text = "Tanggal Daftar"
         ' 
         ' chkAktif
         ' 
         chkAktif.AutoSize = True
-        chkAktif.Location = New Point(137, 145)
+        chkAktif.Location = New Point(196, 242)
+        chkAktif.Margin = New Padding(4, 5, 4, 5)
         chkAktif.Name = "chkAktif"
-        chkAktif.Size = New Size(111, 19)
-        chkAktif.TabIndex = 9
+        chkAktif.Size = New Size(163, 29)
+        chkAktif.TabIndex = 6
         chkAktif.Text = "Aktif e-Learning"
         chkAktif.UseVisualStyleBackColor = True
         ' 
         ' rdoPerempuan
         ' 
         rdoPerempuan.AutoSize = True
-        rdoPerempuan.Location = New Point(222, 109)
+        rdoPerempuan.Location = New Point(317, 182)
+        rdoPerempuan.Margin = New Padding(4, 5, 4, 5)
         rdoPerempuan.Name = "rdoPerempuan"
-        rdoPerempuan.Size = New Size(86, 19)
-        rdoPerempuan.TabIndex = 8
+        rdoPerempuan.Size = New Size(126, 29)
+        rdoPerempuan.TabIndex = 5
         rdoPerempuan.TabStop = True
         rdoPerempuan.Text = "Perempuan"
         rdoPerempuan.UseVisualStyleBackColor = True
@@ -113,10 +120,11 @@ Partial Class FormDataSiswa
         ' rdoLaki
         ' 
         rdoLaki.AutoSize = True
-        rdoLaki.Location = New Point(137, 110)
+        rdoLaki.Location = New Point(196, 183)
+        rdoLaki.Margin = New Padding(4, 5, 4, 5)
         rdoLaki.Name = "rdoLaki"
-        rdoLaki.Size = New Size(69, 19)
-        rdoLaki.TabIndex = 7
+        rdoLaki.Size = New Size(100, 29)
+        rdoLaki.TabIndex = 4
         rdoLaki.TabStop = True
         rdoLaki.Text = "Laki-laki"
         rdoLaki.UseVisualStyleBackColor = True
@@ -124,106 +132,130 @@ Partial Class FormDataSiswa
         ' cboKelas
         ' 
         cboKelas.FormattingEnabled = True
-        cboKelas.Location = New Point(137, 77)
+        cboKelas.Location = New Point(196, 128)
+        cboKelas.Margin = New Padding(4, 5, 4, 5)
         cboKelas.Name = "cboKelas"
-        cboKelas.Size = New Size(121, 23)
-        cboKelas.TabIndex = 6
+        cboKelas.Size = New Size(247, 33)
+        cboKelas.TabIndex = 3
         ' 
         ' txtNama
         ' 
-        txtNama.Location = New Point(137, 48)
+        txtNama.Location = New Point(196, 80)
+        txtNama.Margin = New Padding(4, 5, 4, 5)
         txtNama.Name = "txtNama"
-        txtNama.Size = New Size(121, 23)
-        txtNama.TabIndex = 4
+        txtNama.Size = New Size(247, 31)
+        txtNama.TabIndex = 2
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(6, 113)
+        Label4.Location = New Point(9, 188)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(78, 15)
+        Label4.Size = New Size(116, 25)
         Label4.TabIndex = 3
         Label4.Text = "Jenis Kelamin"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(6, 85)
+        Label3.Location = New Point(9, 142)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(34, 15)
+        Label3.Size = New Size(52, 25)
         Label3.TabIndex = 2
         Label3.Text = "Kelas"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(6, 56)
+        Label2.Location = New Point(9, 93)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(39, 15)
+        Label2.Size = New Size(59, 25)
         Label2.TabIndex = 2
         Label2.Text = "Nama"
         ' 
         ' txtNIS
         ' 
-        txtNIS.Location = New Point(137, 19)
+        txtNIS.Location = New Point(196, 32)
+        txtNIS.Margin = New Padding(4, 5, 4, 5)
         txtNIS.Name = "txtNIS"
-        txtNIS.Size = New Size(121, 23)
+        txtNIS.Size = New Size(247, 31)
         txtNIS.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(6, 27)
+        Label1.Location = New Point(9, 45)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(25, 15)
+        Label1.Size = New Size(40, 25)
         Label1.TabIndex = 0
         Label1.Text = "NIS"
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(btnKembali)
         GroupBox1.Controls.Add(btnBersih)
         GroupBox1.Controls.Add(btnHapus)
         GroupBox1.Controls.Add(btnUbah)
         GroupBox1.Controls.Add(btnTambah)
-        GroupBox1.Location = New Point(12, 233)
+        GroupBox1.Location = New Point(13, 382)
+        GroupBox1.Margin = New Padding(4, 5, 4, 5)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(504, 76)
+        GroupBox1.Padding = New Padding(4, 5, 4, 5)
+        GroupBox1.Size = New Size(1123, 103)
         GroupBox1.TabIndex = 1
         GroupBox1.TabStop = False
         GroupBox1.Text = "Aksi"
         ' 
+        ' btnKembali
+        ' 
+        btnKembali.Location = New Point(547, 37)
+        btnKembali.Margin = New Padding(4, 5, 4, 5)
+        btnKembali.Name = "btnKembali"
+        btnKembali.Size = New Size(235, 38)
+        btnKembali.TabIndex = 4
+        btnKembali.Text = "Kembali ke Dashboard"
+        btnKembali.UseVisualStyleBackColor = True
+        ' 
         ' btnBersih
         ' 
-        btnBersih.Location = New Point(290, 22)
+        btnBersih.Location = New Point(414, 37)
+        btnBersih.Margin = New Padding(4, 5, 4, 5)
         btnBersih.Name = "btnBersih"
-        btnBersih.Size = New Size(75, 23)
+        btnBersih.Size = New Size(107, 38)
         btnBersih.TabIndex = 3
         btnBersih.Text = "Bersih"
         btnBersih.UseVisualStyleBackColor = True
         ' 
         ' btnHapus
         ' 
-        btnHapus.Location = New Point(196, 22)
+        btnHapus.Location = New Point(280, 37)
+        btnHapus.Margin = New Padding(4, 5, 4, 5)
         btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(75, 23)
+        btnHapus.Size = New Size(107, 38)
         btnHapus.TabIndex = 2
         btnHapus.Text = "Hapus"
         btnHapus.UseVisualStyleBackColor = True
         ' 
         ' btnUbah
         ' 
-        btnUbah.Location = New Point(100, 22)
+        btnUbah.Location = New Point(143, 37)
+        btnUbah.Margin = New Padding(4, 5, 4, 5)
         btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(75, 23)
+        btnUbah.Size = New Size(107, 38)
         btnUbah.TabIndex = 1
         btnUbah.Text = "Ubah"
         btnUbah.UseVisualStyleBackColor = True
         ' 
         ' btnTambah
         ' 
-        btnTambah.Location = New Point(6, 22)
+        btnTambah.Location = New Point(9, 37)
+        btnTambah.Margin = New Padding(4, 5, 4, 5)
         btnTambah.Name = "btnTambah"
-        btnTambah.Size = New Size(75, 23)
+        btnTambah.Size = New Size(107, 38)
         btnTambah.TabIndex = 0
         btnTambah.Text = "Tambah"
         btnTambah.UseVisualStyleBackColor = True
@@ -231,51 +263,72 @@ Partial Class FormDataSiswa
         ' dgvSiswa
         ' 
         dgvSiswa.AllowUserToAddRows = False
+        dgvSiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvSiswa.Columns.AddRange(New DataGridViewColumn() {NIS, Nama, Kelas, JK, Aktif, TglDaftar})
-        dgvSiswa.Location = New Point(12, 315)
+        dgvSiswa.Dock = DockStyle.Bottom
+        dgvSiswa.Location = New Point(0, 495)
+        dgvSiswa.Margin = New Padding(4, 5, 4, 5)
         dgvSiswa.Name = "dgvSiswa"
-        dgvSiswa.Size = New Size(504, 123)
+        dgvSiswa.ReadOnly = True
+        dgvSiswa.RowHeadersWidth = 62
+        dgvSiswa.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvSiswa.Size = New Size(1143, 205)
         dgvSiswa.TabIndex = 2
         ' 
         ' NIS
         ' 
         NIS.HeaderText = "NIS"
+        NIS.MinimumWidth = 8
         NIS.Name = "NIS"
+        NIS.ReadOnly = True
         ' 
         ' Nama
         ' 
         Nama.HeaderText = "Nama"
+        Nama.MinimumWidth = 8
         Nama.Name = "Nama"
+        Nama.ReadOnly = True
         ' 
         ' Kelas
         ' 
         Kelas.HeaderText = "Kelas"
+        Kelas.MinimumWidth = 8
         Kelas.Name = "Kelas"
+        Kelas.ReadOnly = True
         ' 
         ' JK
         ' 
         JK.HeaderText = "JK"
+        JK.MinimumWidth = 8
         JK.Name = "JK"
+        JK.ReadOnly = True
         ' 
         ' Aktif
         ' 
         Aktif.HeaderText = "Aktif"
+        Aktif.MinimumWidth = 8
         Aktif.Name = "Aktif"
+        Aktif.ReadOnly = True
         ' 
         ' TglDaftar
         ' 
         TglDaftar.HeaderText = "TglDaftar"
+        TglDaftar.MinimumWidth = 8
         TglDaftar.Name = "TglDaftar"
+        TglDaftar.ReadOnly = True
         ' 
         ' FormDataSiswa
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(1143, 700)
         Controls.Add(dgvSiswa)
         Controls.Add(GroupBox1)
         Controls.Add(grpFormSiswa)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        Margin = New Padding(4, 5, 4, 5)
+        MaximizeBox = False
         Name = "FormDataSiswa"
         Text = "Data Siswa"
         grpFormSiswa.ResumeLayout(False)
@@ -310,4 +363,5 @@ Partial Class FormDataSiswa
     Friend WithEvents JK As DataGridViewTextBoxColumn
     Friend WithEvents Aktif As DataGridViewTextBoxColumn
     Friend WithEvents TglDaftar As DataGridViewTextBoxColumn
+    Friend WithEvents btnKembali As Button
 End Class
