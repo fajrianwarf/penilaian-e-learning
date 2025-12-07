@@ -32,6 +32,7 @@ Partial Class FormDataMapel
         txtKode = New TextBox()
         Label1 = New Label()
         GroupBox1 = New GroupBox()
+        btnKembali = New Button()
         btnBersih = New Button()
         btnHapus = New Button()
         btnUbah = New Button()
@@ -57,126 +58,154 @@ Partial Class FormDataMapel
         grpFormMapel.Controls.Add(Label2)
         grpFormMapel.Controls.Add(txtKode)
         grpFormMapel.Controls.Add(Label1)
-        grpFormMapel.Location = New Point(12, 12)
+        grpFormMapel.Location = New Point(13, 14)
+        grpFormMapel.Margin = New Padding(4, 5, 4, 5)
         grpFormMapel.Name = "grpFormMapel"
-        grpFormMapel.Size = New Size(397, 220)
+        grpFormMapel.Padding = New Padding(4, 5, 4, 5)
+        grpFormMapel.Size = New Size(1117, 260)
         grpFormMapel.TabIndex = 0
         grpFormMapel.TabStop = False
         grpFormMapel.Text = "Form Mata Pelajaran"
         ' 
         ' cboKategori
         ' 
+        cboKategori.DropDownStyle = ComboBoxStyle.DropDownList
         cboKategori.FormattingEnabled = True
-        cboKategori.Location = New Point(127, 119)
+        cboKategori.Location = New Point(181, 204)
+        cboKategori.Margin = New Padding(4, 5, 4, 5)
         cboKategori.Name = "cboKategori"
-        cboKategori.Size = New Size(121, 23)
-        cboKategori.TabIndex = 7
+        cboKategori.Size = New Size(206, 33)
+        cboKategori.TabIndex = 4
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(15, 127)
+        Label4.Location = New Point(21, 212)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(51, 15)
+        Label4.Size = New Size(78, 25)
         Label4.TabIndex = 6
         Label4.Text = "Kategori"
         ' 
         ' numSKS
         ' 
-        numSKS.Location = New Point(128, 88)
+        numSKS.Location = New Point(181, 154)
+        numSKS.Margin = New Padding(4, 5, 4, 5)
         numSKS.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         numSKS.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         numSKS.Name = "numSKS"
-        numSKS.Size = New Size(120, 23)
-        numSKS.TabIndex = 5
+        numSKS.Size = New Size(206, 31)
+        numSKS.TabIndex = 3
         numSKS.Value = New Decimal(New Integer() {2, 0, 0, 0})
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(15, 96)
+        Label3.Location = New Point(21, 160)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(58, 15)
+        Label3.Size = New Size(90, 25)
         Label3.TabIndex = 4
         Label3.Text = "SKS / Jam"
         ' 
         ' txtNama
         ' 
-        txtNama.Location = New Point(128, 54)
+        txtNama.Location = New Point(181, 97)
+        txtNama.Margin = New Padding(4, 5, 4, 5)
         txtNama.Name = "txtNama"
-        txtNama.Size = New Size(100, 23)
-        txtNama.TabIndex = 3
+        txtNama.Size = New Size(206, 31)
+        txtNama.TabIndex = 2
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(15, 62)
+        Label2.Location = New Point(21, 103)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(75, 15)
+        Label2.Size = New Size(113, 25)
         Label2.TabIndex = 2
         Label2.Text = "Nama Mapel"
         ' 
         ' txtKode
         ' 
-        txtKode.Location = New Point(128, 22)
+        txtKode.Location = New Point(183, 44)
+        txtKode.Margin = New Padding(4, 5, 4, 5)
         txtKode.Name = "txtKode"
-        txtKode.Size = New Size(100, 23)
+        txtKode.Size = New Size(204, 31)
         txtKode.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(15, 30)
+        Label1.Location = New Point(21, 50)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(70, 15)
+        Label1.Size = New Size(107, 25)
         Label1.TabIndex = 0
         Label1.Text = "Kode Mapel"
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(btnKembali)
         GroupBox1.Controls.Add(btnBersih)
         GroupBox1.Controls.Add(btnHapus)
         GroupBox1.Controls.Add(btnUbah)
         GroupBox1.Controls.Add(btnTambah)
-        GroupBox1.Location = New Point(12, 238)
+        GroupBox1.Location = New Point(13, 284)
+        GroupBox1.Margin = New Padding(4, 5, 4, 5)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(397, 76)
+        GroupBox1.Padding = New Padding(4, 5, 4, 5)
+        GroupBox1.Size = New Size(1117, 100)
         GroupBox1.TabIndex = 2
         GroupBox1.TabStop = False
         GroupBox1.Text = "Aksi"
         ' 
+        ' btnKembali
+        ' 
+        btnKembali.Location = New Point(545, 37)
+        btnKembali.Margin = New Padding(4, 5, 4, 5)
+        btnKembali.Name = "btnKembali"
+        btnKembali.Size = New Size(219, 38)
+        btnKembali.TabIndex = 4
+        btnKembali.Text = "Kembali ke Dashboard"
+        btnKembali.UseVisualStyleBackColor = True
+        ' 
         ' btnBersih
         ' 
-        btnBersih.Location = New Point(290, 22)
+        btnBersih.Location = New Point(414, 37)
+        btnBersih.Margin = New Padding(4, 5, 4, 5)
         btnBersih.Name = "btnBersih"
-        btnBersih.Size = New Size(75, 23)
+        btnBersih.Size = New Size(107, 38)
         btnBersih.TabIndex = 3
         btnBersih.Text = "Bersih"
         btnBersih.UseVisualStyleBackColor = True
         ' 
         ' btnHapus
         ' 
-        btnHapus.Location = New Point(196, 22)
+        btnHapus.Location = New Point(280, 37)
+        btnHapus.Margin = New Padding(4, 5, 4, 5)
         btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(75, 23)
+        btnHapus.Size = New Size(107, 38)
         btnHapus.TabIndex = 2
         btnHapus.Text = "Hapus"
         btnHapus.UseVisualStyleBackColor = True
         ' 
         ' btnUbah
         ' 
-        btnUbah.Location = New Point(100, 22)
+        btnUbah.Location = New Point(143, 37)
+        btnUbah.Margin = New Padding(4, 5, 4, 5)
         btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(75, 23)
+        btnUbah.Size = New Size(107, 38)
         btnUbah.TabIndex = 1
         btnUbah.Text = "Ubah"
         btnUbah.UseVisualStyleBackColor = True
         ' 
         ' btnTambah
         ' 
-        btnTambah.Location = New Point(6, 22)
+        btnTambah.Location = New Point(9, 37)
+        btnTambah.Margin = New Padding(4, 5, 4, 5)
         btnTambah.Name = "btnTambah"
-        btnTambah.Size = New Size(75, 23)
+        btnTambah.Size = New Size(107, 38)
         btnTambah.TabIndex = 0
         btnTambah.Text = "Tambah"
         btnTambah.UseVisualStyleBackColor = True
@@ -184,41 +213,59 @@ Partial Class FormDataMapel
         ' dgvMapel
         ' 
         dgvMapel.AllowUserToAddRows = False
+        dgvMapel.AllowUserToDeleteRows = False
+        dgvMapel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvMapel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvMapel.Columns.AddRange(New DataGridViewColumn() {Kode, Nama, SKS, Kategori})
-        dgvMapel.Location = New Point(12, 320)
+        dgvMapel.Dock = DockStyle.Bottom
+        dgvMapel.Location = New Point(0, 401)
+        dgvMapel.Margin = New Padding(4, 5, 4, 5)
         dgvMapel.Name = "dgvMapel"
-        dgvMapel.Size = New Size(397, 123)
+        dgvMapel.ReadOnly = True
+        dgvMapel.RowHeadersWidth = 62
+        dgvMapel.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvMapel.Size = New Size(1143, 205)
         dgvMapel.TabIndex = 3
         ' 
         ' Kode
         ' 
         Kode.HeaderText = "Kode"
+        Kode.MinimumWidth = 8
         Kode.Name = "Kode"
+        Kode.ReadOnly = True
         ' 
         ' Nama
         ' 
         Nama.HeaderText = "Nama Mapel"
+        Nama.MinimumWidth = 8
         Nama.Name = "Nama"
+        Nama.ReadOnly = True
         ' 
         ' SKS
         ' 
         SKS.HeaderText = "SKS"
+        SKS.MinimumWidth = 8
         SKS.Name = "SKS"
+        SKS.ReadOnly = True
         ' 
         ' Kategori
         ' 
         Kategori.HeaderText = "Kategori"
+        Kategori.MinimumWidth = 8
         Kategori.Name = "Kategori"
+        Kategori.ReadOnly = True
         ' 
         ' FormDataMapel
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(1143, 606)
         Controls.Add(dgvMapel)
         Controls.Add(GroupBox1)
         Controls.Add(grpFormMapel)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        Margin = New Padding(4, 5, 4, 5)
+        MaximizeBox = False
         Name = "FormDataMapel"
         Text = "Data Mata Pelajaran"
         grpFormMapel.ResumeLayout(False)
@@ -248,4 +295,5 @@ Partial Class FormDataMapel
     Friend WithEvents Nama As DataGridViewTextBoxColumn
     Friend WithEvents SKS As DataGridViewTextBoxColumn
     Friend WithEvents Kategori As DataGridViewTextBoxColumn
+    Friend WithEvents btnKembali As Button
 End Class

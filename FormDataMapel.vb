@@ -1,6 +1,7 @@
 ﻿Public Class FormDataMapel
 
     Private Sub FormDataMapel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetupGrid()
         LoadKategori()
         RefreshGrid()
         numSKS.Value = 2
@@ -27,6 +28,18 @@
         Next
     End Sub
 
+    Private Sub SetupGrid()
+        With dgvMapel
+            .AutoGenerateColumns = False
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .ReadOnly = True
+            .AllowUserToAddRows = False
+            .AllowUserToDeleteRows = False
+        End With
+    End Sub
+
+
     Private Sub ClearForm()
         txtKode.Clear()
         txtNama.Clear()
@@ -37,10 +50,12 @@
 
     Private Function ValidasiInput() As Boolean
         If txtKode.Text.Trim() = "" Then
-            MessageBox.Show("Kode mapel belum diisi.", "Validasi")
+            MessageBox.Show("Kode mapel belum diisi.", "Validasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtKode.Focus()
             Return False
         End If
+
         If txtNama.Text.Trim() = "" Then
             MessageBox.Show("Nama mapel belum diisi.", "Validasi")
             txtNama.Focus()
@@ -63,7 +78,8 @@
         If Not ValidasiInput() Then Exit Sub
 
         If CariCourseByKode(txtKode.Text.Trim()) IsNot Nothing Then
-            MessageBox.Show("Kode mapel sudah ada.", "Info")
+            MessageBox.Show("Kode mapel sudah ada.", "Info",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
 
@@ -76,7 +92,8 @@
         Courses.Add(c)
         RefreshGrid()
         ClearForm()
-        MessageBox.Show("Data mata pelajaran berhasil ditambahkan.", "Info")
+        MessageBox.Show("Data mata pelajaran berhasil ditambahkan.", "Info",
+                MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     ' ===== Button Ubah =====
@@ -112,7 +129,7 @@
         End If
 
         If MessageBox.Show("Yakin hapus data mapel ini?", "Konfirmasi",
-                           MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                   MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Courses.Remove(c)
             RefreshGrid()
             ClearForm()
@@ -141,4 +158,9 @@
         ' Kategori disimpan sebagai teks, kita samakan dengan isi combo
         cboKategori.Text = row.Cells(3).Value?.ToString()
     End Sub
+
+    Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
+        Me.Close()
+    End Sub
+
 End Class
