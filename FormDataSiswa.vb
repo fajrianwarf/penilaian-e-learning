@@ -24,7 +24,7 @@
         dgvSiswa.Rows.Clear()
         For Each s In Students
             dgvSiswa.Rows.Add(
-                s.NIS,
+                s.NIM,
                 s.Nama,
                 s.Kelas,
                 s.JenisKelamin,
@@ -46,7 +46,7 @@
 
     Private Function ValidasiInput() As Boolean
         If txtNIS.Text.Trim() = "" Then
-            MessageBox.Show("NIS belum diisi.", "Validasi")
+            MessageBox.Show("NIM belum diisi.", "Validasi")
             txtNIS.Focus()
             Return False
         End If
@@ -60,7 +60,7 @@
 
     Private Function CariStudentByNIS(nis As String) As Student
         For Each s In Students
-            If s.NIS = nis Then
+            If s.NIM = nis Then
                 Return s
             End If
         Next
@@ -72,12 +72,12 @@
         If Not ValidasiInput() Then Exit Sub
 
         If CariStudentByNIS(txtNIS.Text.Trim()) IsNot Nothing Then
-            MessageBox.Show("NIS sudah ada.", "Info")
+            MessageBox.Show("NIM sudah ada.", "Info")
             Return
         End If
 
         Dim s As New Student()
-        s.NIS = txtNIS.Text.Trim()
+        s.NIM = txtNIS.Text.Trim()
         s.Nama = txtNama.Text.Trim()
         s.Kelas = cboKelas.Text
         s.JenisKelamin = If(rdoLaki.Checked, "L", "P")
@@ -95,7 +95,7 @@
 
         Dim s = CariStudentByNIS(txtNIS.Text.Trim())
         If s Is Nothing Then
-            MessageBox.Show("Data dengan NIS tersebut tidak ditemukan.", "Error")
+            MessageBox.Show("Data dengan NIM tersebut tidak ditemukan.", "Error")
             Return
         End If
 
@@ -112,7 +112,7 @@
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
         Dim nis = txtNIS.Text.Trim()
         If nis = "" Then
-            MessageBox.Show("Isi NIS yang akan dihapus.", "Info")
+            MessageBox.Show("Isi NIM yang akan dihapus.", "Info")
             Return
         End If
 

@@ -2,7 +2,7 @@
 
 ' ==== DATA SISWA ====
 Public Class Student
-    Public Property NIS As String
+    Public Property NIM As String
     Public Property Nama As String
     Public Property Kelas As String
     Public Property JenisKelamin As String

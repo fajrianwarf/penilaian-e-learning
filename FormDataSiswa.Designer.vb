@@ -42,7 +42,7 @@ Partial Class FormDataSiswa
         btnUbah = New Button()
         btnTambah = New Button()
         dgvSiswa = New DataGridView()
-        NIS = New DataGridViewTextBoxColumn()
+        NIM = New DataGridViewTextBoxColumn()
         Nama = New DataGridViewTextBoxColumn()
         Kelas = New DataGridViewTextBoxColumn()
         JK = New DataGridViewTextBoxColumn()
@@ -193,7 +193,7 @@ Partial Class FormDataSiswa
         Label1.Name = "Label1"
         Label1.Size = New Size(40, 25)
         Label1.TabIndex = 0
-        Label1.Text = "NIS"
+        Label1.Text = "NIM"
         ' 
         ' GroupBox1
         ' 
@@ -266,7 +266,7 @@ Partial Class FormDataSiswa
         dgvSiswa.AllowUserToAddRows = False
         dgvSiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvSiswa.Columns.AddRange(New DataGridViewColumn() {NIS, Nama, Kelas, JK, Aktif, TglDaftar})
+        dgvSiswa.Columns.AddRange(New DataGridViewColumn() {NIM, Nama, Kelas, JK, Aktif, TglDaftar})
         dgvSiswa.Dock = DockStyle.Bottom
         dgvSiswa.Location = New Point(0, 495)
         dgvSiswa.Margin = New Padding(4, 5, 4, 5)
@@ -277,12 +277,12 @@ Partial Class FormDataSiswa
         dgvSiswa.Size = New Size(1143, 205)
         dgvSiswa.TabIndex = 2
         ' 
-        ' NIS
+        ' NIM
         ' 
-        NIS.HeaderText = "NIS"
-        NIS.MinimumWidth = 8
-        NIS.Name = "NIS"
-        NIS.ReadOnly = True
+        NIM.HeaderText = "NIM"
+        NIM.MinimumWidth = 8
+        NIM.Name = "NIM"
+        NIM.ReadOnly = True
         ' 
         ' Nama
         ' 
@@ -358,7 +358,7 @@ Partial Class FormDataSiswa
     Friend WithEvents btnUbah As Button
     Friend WithEvents btnTambah As Button
     Friend WithEvents dgvSiswa As DataGridView
-    Friend WithEvents NIS As DataGridViewTextBoxColumn
+    Friend WithEvents NIM As DataGridViewTextBoxColumn
     Friend WithEvents Nama As DataGridViewTextBoxColumn
     Friend WithEvents Kelas As DataGridViewTextBoxColumn
     Friend WithEvents JK As DataGridViewTextBoxColumn

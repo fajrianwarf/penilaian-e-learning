@@ -10,8 +10,8 @@
         ' isi combo siswa dari list Students
         cboSiswa.Items.Clear()
         For Each s As Student In Students
-            ' tampilkan "NIS - Nama"
-            cboSiswa.Items.Add(s.NIS & " - " & s.Nama)
+            ' tampilkan "NIM - Nama"
+            cboSiswa.Items.Add(s.NIM & " - " & s.Nama)
         Next
 
         ' isi combo mapel dari list Courses
@@ -121,7 +121,7 @@
 
         Dim kelasDipilih As String = ""
         For Each s As Student In Students
-            If s.NIS = nisDipilih Then
+            If s.NIM = nisDipilih Then
                 kelasDipilih = s.Kelas
                 Exit For
             End If

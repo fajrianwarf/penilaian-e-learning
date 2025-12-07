@@ -1,4 +1,20 @@
 ﻿Public Class FormMain
+    Private Sub FormMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        ' Hanya konfirmasi jika user yang menutup (klik X / Alt+F4 / Close)
+        If e.CloseReason = CloseReason.UserClosing Then
+            Dim result = MessageBox.Show(
+            "Yakin ingin keluar dari aplikasi?",
+            "Konfirmasi",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+        )
+
+            If result = DialogResult.No Then
+                e.Cancel = True   ' batal tutup form
+            End If
+        End If
+    End Sub
+
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateDashboard()
