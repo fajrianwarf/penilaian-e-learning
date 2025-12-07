@@ -1,11 +1,9 @@
 ﻿Public Class FormMain
 
-    ' Saat form pertama kali dibuka
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateDashboard()
     End Sub
 
-    ' Saat form kembali aktif setelah form lain ditutup
     Private Sub FormMain_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         UpdateDashboard()
     End Sub
@@ -13,17 +11,42 @@
     Private Sub UpdateDashboard()
         lblJumlahSiswa.Text = Students.Count.ToString()
         lblJumlahMapel.Text = Courses.Count.ToString()
+
+        Dim totalNilai As Double = 0
+        Dim count As Integer = 0
+        Dim jmlLulus As Integer = 0
+
+        For Each g As GradeRecord In Grades
+            totalNilai += g.NilaiAkhir
+            count += 1
+            If g.Status = "Lulus" Then
+                jmlLulus += 1
+            End If
+        Next
+
+        If count > 0 Then
+            Dim rataRata As Double = totalNilai / count
+            Dim persenLulus As Double = (jmlLulus * 100.0) / count
+
+            lblJumlahPenilaian.Text = count.ToString()
+            lblPersenLulus.Text = persenLulus.ToString("0.0") & " %"
+        Else
+            lblJumlahPenilaian.Text = "0"
+            lblPersenLulus.Text = "- %"
+        End If
     End Sub
 
-    ' ==== MENU EVENTS ====
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Dim result = MessageBox.Show(
+        "Yakin ingin keluar dari aplikasi?",
+        "Konfirmasi",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question
+    )
 
-    Private Sub mnuDataSiswa_Click(sender As Object, e As EventArgs) Handles mnuDataSiswa.Click
-        Dim f As New FormDataSiswa()
-        f.ShowDialog()
-    End Sub
-
-    Private Sub mnuKeluar_Click(sender As Object, e As EventArgs) Handles mnuKeluar.Click
-        Me.Close()
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub mnuTentang_Click(sender As Object, e As EventArgs) Handles mnuTentang.Click
@@ -33,22 +56,27 @@
                         MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
+    Private Sub OpenChildForm(child As Form)
+        Me.Hide()
+        child.StartPosition = FormStartPosition.CenterScreen
+        child.ShowDialog()
+        Me.Show()
+    End Sub
+
+    Private Sub mnuDataSiswa_Click(sender As Object, e As EventArgs) Handles mnuDataSiswa.Click
+        OpenChildForm(New FormDataSiswa())
+    End Sub
+
     Private Sub mnuDataMapel_Click(sender As Object, e As EventArgs) Handles mnuDataMapel.Click
-        Dim f As New FormDataMapel()
-        f.ShowDialog()
+        OpenChildForm(New FormDataMapel())
     End Sub
 
     Private Sub mnuInputNilai_Click(sender As Object, e As EventArgs) Handles mnuInputNilai.Click
-        Dim f As New FormInputNilai()
-        f.ShowDialog()
+        OpenChildForm(New FormInputNilai())
     End Sub
 
     Private Sub mnuRekapNilai_Click(sender As Object, e As EventArgs) Handles mnuRekapNilai.Click
-        Dim f As New FormRekapNilai()
-        f.ShowDialog()
+        OpenChildForm(New FormRekapNilai())
     End Sub
 
-
-    ' mnuDataMapel, mnuInputNilai, mnuRekapNilai
-    ' nanti dipakai saat screen lain sudah kamu buat
 End Class
