@@ -8,6 +8,7 @@
             Return
         End If
 
+        Me.Text = "Detail Nilai - " & SelectedNamaSiswa
         lblNama.Text = SelectedNamaSiswa
 
         LoadDetail()
@@ -46,7 +47,7 @@
             End If
         Next
 
-        lblKelas.Text = kelasPertama
+        lblKelas.Text = If(String.IsNullOrEmpty(kelasPertama), "-", kelasPertama)
 
         If count > 0 Then
             txtRataRata.Text = (totalNilai / count).ToString("0.00")
@@ -55,6 +56,7 @@
             txtRataRata.Text = "-"
             txtGradeTertinggi.Text = "-"
         End If
+
     End Sub
 
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click

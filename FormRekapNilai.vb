@@ -75,7 +75,7 @@
                 totalNilai += g.NilaiAkhir
                 count += 1
 
-                If g.Status = "Lulus" Then
+                If g.NilaiAkhir >= NilaiMinimalLulus Then
                     jmlLulus += 1
                 Else
                     jmlTidakLulus += 1
@@ -86,7 +86,7 @@
         If count > 0 Then
             txtRataRata.Text = (totalNilai / count).ToString("0.00")
         Else
-            txtRataRata.Text = "0"
+            txtRataRata.Text = "-"
         End If
 
         txtJmlLulus.Text = jmlLulus.ToString()
@@ -106,6 +106,11 @@
         Dim namaSiswa As String = dgvRekap.CurrentRow.Cells(0).Value?.ToString()
         If String.IsNullOrWhiteSpace(namaSiswa) Then
             MessageBox.Show("Nama siswa tidak valid.", "Error")
+            Return
+        End If
+
+        If Not Grades.Any(Function(gr) gr.NamaSiswa = namaSiswa) Then
+            MessageBox.Show("Siswa ini belum memiliki data nilai.", "Informasi")
             Return
         End If
 

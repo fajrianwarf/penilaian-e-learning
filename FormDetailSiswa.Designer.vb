@@ -74,10 +74,12 @@ Partial Class FormDetailSiswa
         ' 
         ' dgvDetailNilai
         ' 
+        dgvDetailNilai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvDetailNilai.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvDetailNilai.Columns.AddRange(New DataGridViewColumn() {NamaMapel, Grade, Status})
         dgvDetailNilai.Location = New Point(12, 114)
         dgvDetailNilai.Name = "dgvDetailNilai"
+        dgvDetailNilai.ReadOnly = True
         dgvDetailNilai.RowHeadersWidth = 62
         dgvDetailNilai.Size = New Size(662, 225)
         dgvDetailNilai.TabIndex = 4
@@ -87,21 +89,21 @@ Partial Class FormDetailSiswa
         NamaMapel.HeaderText = "Nama Mapel"
         NamaMapel.MinimumWidth = 8
         NamaMapel.Name = "NamaMapel"
-        NamaMapel.Width = 150
+        NamaMapel.ReadOnly = True
         ' 
         ' Grade
         ' 
         Grade.HeaderText = "Grade"
         Grade.MinimumWidth = 8
         Grade.Name = "Grade"
-        Grade.Width = 150
+        Grade.ReadOnly = True
         ' 
         ' Status
         ' 
         Status.HeaderText = "Status"
         Status.MinimumWidth = 8
         Status.Name = "Status"
-        Status.Width = 150
+        Status.ReadOnly = True
         ' 
         ' Label3
         ' 

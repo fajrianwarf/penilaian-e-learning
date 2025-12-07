@@ -131,6 +131,7 @@ Partial Class FormDataSiswa
         ' 
         ' cboKelas
         ' 
+        cboKelas.DropDownStyle = ComboBoxStyle.DropDownList
         cboKelas.FormattingEnabled = True
         cboKelas.Location = New Point(196, 128)
         cboKelas.Margin = New Padding(4, 5, 4, 5)
