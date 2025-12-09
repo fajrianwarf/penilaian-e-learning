@@ -83,6 +83,13 @@
             End If
         Next
 
+        lblEmpty.Visible = (count = 0)
+        If count = 0 Then
+            lblEmpty.Text = "Belum ada data penilaian tersimpan." &
+                        Environment.NewLine &
+                        "Silakan input nilai lalu simpan ke rekap."
+        End If
+
         If count > 0 Then
             txtRataRata.Text = (totalNilai / count).ToString("0.00")
         Else
@@ -93,7 +100,7 @@
         txtJmlTdkLulus.Text = jmlTidakLulus.ToString()
     End Sub
 
-    Private Sub btnTampilkan_Click(sender As Object, e As EventArgs) Handles btnTampilkan.Click
+    Private Sub btnTampilkan_Click(sender As Object, e As EventArgs)
         LoadRekap()
     End Sub
 
@@ -122,4 +129,13 @@
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
         Me.Close()
     End Sub
+
+    Private Sub cboFilterKelas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFilterKelas.SelectedIndexChanged
+        LoadRekap()
+    End Sub
+
+    Private Sub cboFilterMapel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFilterMapel.SelectedIndexChanged
+        LoadRekap()
+    End Sub
+
 End Class
