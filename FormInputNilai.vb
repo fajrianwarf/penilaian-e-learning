@@ -68,6 +68,8 @@
     End Function
 
     ' ========== BUTTON HITUNG ==========
+    Private isSudahDihitung As Boolean = False
+    Private isSudahDisimpan As Boolean = False
     Private Sub btnHitung_Click(sender As Object, e As EventArgs) Handles btnHitung.Click
         If cboSiswa.Items.Count = 0 Or cboMapel.Items.Count = 0 Then
             MessageBox.Show("Data siswa dan mata pelajaran belum ada.", "Perhatian")
@@ -100,6 +102,8 @@
         txtStatus.Text = status
 
         MessageBox.Show("Perhitungan nilai berhasil.", "Informasi")
+        isSudahDihitung = True
+        isSudahDisimpan = False
     End Sub
 
     ' ========== BUTTON SIMPAN ==========
@@ -150,6 +154,7 @@
         Grades.Add(rec)
 
         MessageBox.Show("Data penilaian berhasil disimpan.", "Informasi")
+        isSudahDisimpan = True
     End Sub
 
     ' ========== BUTTON RESET ==========
@@ -159,5 +164,24 @@
 
     Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
         Me.Close()
+    End Sub
+
+    Private Sub FormInputNilai_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If isSudahDihitung AndAlso Not isSudahDisimpan Then
+            Dim result = MessageBox.Show(
+                "Nilai sudah dihitung tetapi belum disimpan ke rekap." &
+                Environment.NewLine &
+                "Simpan sekarang?",
+                "Konfirmasi",
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Question
+            )
+
+            If result = DialogResult.Yes Then
+                btnSimpan.PerformClick()
+            ElseIf result = DialogResult.Cancel Then
+                e.Cancel = True
+            End If
+        End If
     End Sub
 End Class
