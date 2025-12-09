@@ -67,7 +67,7 @@
 
     Private Sub mnuTentang_Click(sender As Object, e As EventArgs) Handles mnuTentang.Click
         MessageBox.Show("Aplikasi Penilaian E-Learning" & Environment.NewLine &
-                        "Dibuat untuk tugas Praktikum Visual.",
+                        "Dibuat untuk tugas UTS Pemrograman Visual.",
                         "Tentang Aplikasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub

@@ -191,7 +191,7 @@ Partial Class FormDataSiswa
         Label1.Location = New Point(9, 45)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(40, 25)
+        Label1.Size = New Size(46, 25)
         Label1.TabIndex = 0
         Label1.Text = "NIM"
         ' 
@@ -300,7 +300,7 @@ Partial Class FormDataSiswa
         ' 
         ' JK
         ' 
-        JK.HeaderText = "JK"
+        JK.HeaderText = "Jenis Kelamin"
         JK.MinimumWidth = 8
         JK.Name = "JK"
         JK.ReadOnly = True
@@ -314,7 +314,7 @@ Partial Class FormDataSiswa
         ' 
         ' TglDaftar
         ' 
-        TglDaftar.HeaderText = "TglDaftar"
+        TglDaftar.HeaderText = "Tanggal Daftar"
         TglDaftar.MinimumWidth = 8
         TglDaftar.Name = "TglDaftar"
         TglDaftar.ReadOnly = True
@@ -358,11 +358,11 @@ Partial Class FormDataSiswa
     Friend WithEvents btnUbah As Button
     Friend WithEvents btnTambah As Button
     Friend WithEvents dgvSiswa As DataGridView
+    Friend WithEvents btnKembali As Button
     Friend WithEvents NIM As DataGridViewTextBoxColumn
     Friend WithEvents Nama As DataGridViewTextBoxColumn
     Friend WithEvents Kelas As DataGridViewTextBoxColumn
     Friend WithEvents JK As DataGridViewTextBoxColumn
     Friend WithEvents Aktif As DataGridViewTextBoxColumn
     Friend WithEvents TglDaftar As DataGridViewTextBoxColumn
-    Friend WithEvents btnKembali As Button
 End Class
