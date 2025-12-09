@@ -23,11 +23,21 @@
     Private Sub RefreshGrid()
         dgvSiswa.Rows.Clear()
         For Each s In Students
+            Dim jkDisplay As String
+
+            If s.JenisKelamin = "L" Then
+                jkDisplay = "Laki-laki"
+            ElseIf s.JenisKelamin = "P" Then
+                jkDisplay = "Perempuan"
+            Else
+                jkDisplay = s.JenisKelamin
+            End If
+
             dgvSiswa.Rows.Add(
                 s.NIM,
                 s.Nama,
                 s.Kelas,
-                s.JenisKelamin,
+                jkDisplay,
                 If(s.Aktif, "Aktif", "Tidak"),
                 s.TanggalDaftar.ToShortDateString()
             )
